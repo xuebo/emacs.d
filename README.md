@@ -1,4 +1,4 @@
 emacs.d
 =======
 
-My emacs configuration
+My emacs configuration.
