@@ -1,5 +1,4 @@
 ;;; Find and load the correct package.el
-(provide 'dp-elpa)
 
 ;; When switching between Emacs 23 and 24, we always use the bundled package.el in Emacs 24
 (let ((package-el-site-lisp-dir
@@ -67,3 +66,5 @@ re-downloaded in order to locate PACKAGE."
 
 ;;; Fire up package.el
 (package-initialize)
+
+(provide 'dp-elpa)

@@ -1,5 +1,4 @@
 ;;; Set load path
-(provide 'dp-site-lisp)
 
 (eval-when-compile (require 'cl))
 (defun sanityinc/add-subdirs-to-load-path (parent-dir)
@@ -52,3 +51,5 @@ source file under ~/.emacs.d/site-lisp/name/"
    'package
    "http://repo.or.cz/w/emacs.git/blob_plain/1a0a666f941c99882093d7bd08ced15033bc3f0c:/lisp/emacs-lisp/package.el"))
 
+
+(provide 'dp-site-lisp)
