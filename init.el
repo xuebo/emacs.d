@@ -15,3 +15,4 @@
 
 ;; evil package
 (require-package 'evil)
+(evil-mode t)
