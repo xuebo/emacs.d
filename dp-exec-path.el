@@ -1,4 +1,4 @@
-(provide 'init-exec-path)
+(provide 'dp-exec-path)
 
 (require-package 'exec-path-from-shell)
 
