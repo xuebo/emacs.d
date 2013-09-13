@@ -15,8 +15,6 @@
 (when (< emacs-major-version 24)
   (require-package 'color-theme))
 
-(cool)
-
 ;; Toggle between light and dark
 (defun cool ()
   "Activate a cool color theme."
@@ -48,7 +46,7 @@ Emacs.pane.menubar.foreground: black"
      ((foreground-color . "white smoke")
       (background-color . "grey10")
       (mouse-color . "gold")
-      (cursor-color . "yellow")
+      (cursor-color . "hotpink")
       (border-color . "black")
       (background-mode . dark))
    (default ((t (nil))))
@@ -184,3 +182,6 @@ Emacs.pane.menubar.foreground: black"
    (widget-field-face ((t (:background "dim gray" :foreground "white"))))
    (widget-inactive-face ((t (:foreground "light gray"))))
    (widget-single-line-field-face ((t (:background "dim gray" :foreground "white")))))))
+
+;; default theme
+(cool)
