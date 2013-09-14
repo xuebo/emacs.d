@@ -29,6 +29,8 @@
 (require 'dp-ibuffer)
 (require 'dp-flycheck)
 
+(require 'dp-recentf)
+
 ;; Allow access from emacsclient
 (require 'server)
 (unless (server-running-p)
