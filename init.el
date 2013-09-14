@@ -31,7 +31,7 @@
 
 (require 'dp-recentf)
 (require 'dp-ido)
-(require 'dp-hippie-expan)
+(require 'dp-hippie-expand.el)
 (require 'dp-auto-complete)
 
 ;; Allow access from emacsclient
