@@ -32,6 +32,7 @@
 (require 'dp-recentf)
 (require 'dp-ido)
 (require 'dp-hippie-expan)
+(require 'dp-auto-complete)
 
 ;; Allow access from emacsclient
 (require 'server)
