@@ -30,6 +30,7 @@
 (require 'dp-flycheck)
 
 (require 'dp-recentf)
+(require 'dp-ido)
 
 ;; Allow access from emacsclient
 (require 'server)
