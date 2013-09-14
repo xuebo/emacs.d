@@ -1,4 +1,4 @@
-(provide 'init-growl)
+(provide 'dp-growl)
 
 (require-package 'todochiku)
 
@@ -11,11 +11,11 @@
   "Path to the terminal-notifier app for Mountain Lion, if installed.
 See https://github.com/alloy/terminal-notifier for more information.")
 
-(when (and *is-a-mac* (file-executable-p terminal-notifier-path))
-  (defadvice todochiku-get-arguments (around todochiku-terminal-notifier activate)
-    (setq ad-return-value
-          (list "-title" title "-message" message "-activate" "org.gnu.Emacs")))
-  (setq todochiku-command terminal-notifier-path))
+;; (when (and *is-a-mac* (file-executable-p terminal-notifier-path))
+;;   (defadvice todochiku-get-arguments (around todochiku-terminal-notifier activate)
+;;     (setq ad-return-value
+;;           (list "-title" title "-message" message "-activate" "org.gnu.Emacs")))
+;;   (setq todochiku-command terminal-notifier-path))
 
 (defadvice todochiku-message (around check-for-helper activate)
   "Suppress message attempts when the `todochiku-command' program is missing."
