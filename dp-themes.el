@@ -3,7 +3,7 @@
 ;; cursor color
 (set-cursor-color "hotpink")
 
-(let ((spec '((t (:family "Nimbus Roman")))))
+(let ((spec '((t (:family "Times New Roman" :height 150)))))
         (mapc (lambda (face)
             (face-spec-set face spec)
             (put face 'face-defface-spec spec))
