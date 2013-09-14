@@ -31,6 +31,7 @@
 
 (require 'dp-recentf)
 (require 'dp-ido)
+(require 'dp-hippie-expan)
 
 ;; Allow access from emacsclient
 (require 'server)
@@ -39,7 +40,6 @@
 
 ;; Allow users to provide an optional "dp-local" containing personal settings
 (require 'dp-local nil t)
-
 
 (require 'dp-gui-frames)
 (message "init completed in %.2fs"
