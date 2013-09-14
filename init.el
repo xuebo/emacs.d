@@ -24,7 +24,7 @@
 (require-package 'mwe-log-commands)
 
 (require 'dp-delimiters)
-
+(require 'dp-dired)
 
 ;; Allow access from emacsclient
 (require 'server)
