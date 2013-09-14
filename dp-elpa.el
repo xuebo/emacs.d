@@ -1,3 +1,4 @@
+(provide 'dp-elpa)
 ;;; Find and load the correct package.el
 
 ;; When switching between Emacs 23 and 24, we always use the bundled package.el in Emacs 24
@@ -66,5 +67,3 @@ re-downloaded in order to locate PACKAGE."
 
 ;;; Fire up package.el
 (package-initialize)
-
-(provide 'dp-elpa)
