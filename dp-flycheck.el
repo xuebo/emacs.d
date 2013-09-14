@@ -1,4 +1,4 @@
-(provide 'init-flycheck)
+(provide 'dp-flycheck)
 
 (when (eval-when-compile (>= emacs-major-version 24))
   (require-package 'flycheck)
