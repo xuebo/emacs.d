@@ -25,6 +25,7 @@
 
 (require 'dp-delimiters)
 (require 'dp-dired)
+(require 'dp-uniquify)
 
 ;; Allow access from emacsclient
 (require 'server)
