@@ -13,9 +13,10 @@
 ;; Set up $PATH 
 (require 'dp-exec-path)
 
-;;
-(require 'dp-themes)
-
 ;; evil package
 (require-package 'evil)
 (evil-mode t)
+
+;;
+(require 'dp-themes)
+
