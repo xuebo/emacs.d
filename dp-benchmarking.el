@@ -1,5 +1,8 @@
 (provide 'dp-benchmarking)
 
+(defun sanityinc/time-subtract-millis (b a)
+  (* 1000.0 (float-time (time-subtract b a))))
+
 (defvar require-times-alist nil
   "A list of (FEATURE . LOAD-DURATION).
 LOAD-DURATION is the time taken in milliseconds to load FEATURE.")
