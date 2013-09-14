@@ -33,6 +33,8 @@
 (require 'dp-ido)
 (require 'dp-hippie-expand)
 (require 'dp-auto-complete)
+(require 'dp-windows)
+(require 'dp-sessions)
 
 ;; Allow access from emacsclient
 (require 'server)
