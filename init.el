@@ -27,6 +27,7 @@
 (require 'dp-dired)
 (require 'dp-uniquify)
 (require 'dp-ibuffer)
+(require 'dp-flycheck)
 
 ;; Allow access from emacsclient
 (require 'server)
