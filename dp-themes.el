@@ -1,5 +1,14 @@
 (provide 'dp-themes)
 
+;; cursor color
+(set-cursor-color "hotpink")
+
+(let ((spec '((t (:family "Nimbus Roman")))))
+        (mapc (lambda (face)
+            (face-spec-set face spec)
+            (put face 'face-defface-spec spec))
+            '(default menu)))
+
 (require-package 'color-theme)
 (require 'dp-color-themes)
 
