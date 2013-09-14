@@ -35,7 +35,7 @@
 (require 'dp-auto-complete)
 (require 'dp-windows)
 (require 'dp-sessions)
-(require 'dp-fonts)
+(require 'dp-font)
 
 ;; Allow access from emacsclient
 (require 'server)

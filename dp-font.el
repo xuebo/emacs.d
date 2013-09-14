@@ -1,7 +1,6 @@
-(provide 'dp-fonts)
+(provide 'dp-font)
 
 (require 'cl)
-
 
 (defun sanityinc/font-name-replace-size (font-name new-size)
   (let ((parts (split-string font-name "-")))
@@ -36,5 +35,3 @@ by the :height face attribute."
 
 (global-set-key (kbd "C-M-=") 'sanityinc/increase-default-font-height)
 (global-set-key (kbd "C-M--") 'sanityinc/decrease-default-font-height)
-
-
