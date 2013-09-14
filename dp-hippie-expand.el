@@ -1,4 +1,4 @@
-(provide 'init-hippie-expand)
+(provide 'dp-hippie-expand)
 
 (global-set-key (kbd "M-/") 'hippie-expand)
 (setq hippie-expand-try-functions-list
