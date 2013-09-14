@@ -37,6 +37,7 @@
 (require 'dp-sessions)
 (require 'dp-font)
 (require 'dp-mmm)
+(require 'dp-growl)
 
 ;; Allow access from emacsclient
 (require 'server)
