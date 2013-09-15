@@ -39,6 +39,11 @@
 (require 'dp-mmm)
 (require 'dp-growl)
 
+(require 'dp-darcs)
+(require 'dp-git)
+
+(require 'dp-markdown)
+
 ;; Allow access from emacsclient
 (require 'server)
 (unless (server-running-p)
