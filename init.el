@@ -39,10 +39,15 @@
 (require 'dp-mmm)
 (require 'dp-growl)
 
+;;; vc
 (require 'dp-darcs)
 (require 'dp-git)
 
+;;;program
 (require 'dp-markdown)
+(require 'dp-org)
+(require 'dp-javascript)
+(require 'dp-php)
 
 ;; Allow access from emacsclient
 (require 'server)
