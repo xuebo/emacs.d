@@ -74,22 +74,22 @@
 )
 
 ;; add auto-complete
-(add-to-list 'load-path "~/.emacs.d/plugins/ac/pos-tip")
-(add-to-list 'load-path "~/.emacs.d/plugins/ac/fuzzy")
-(add-to-list 'load-path "~/.emacs.d/plugins/ac/popup")
-(add-to-list 'load-path "~/.emacs.d/plugins/ac/auto-complete")
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories
-             "~/.emacs.d/plugins/ac/auto-complete/dict")
-(ac-config-default)
-;;(require 'pos-tip)
-(setq ac-quick-help-prefer-pos-tip t)   ;default is t
-(setq ac-use-quick-help t)
-(setq ac-quick-help-delay 1.0)
-(setq ac-dwim t)
-(setq ac-fuzzy-enable t)
-(setq ac-auto-start nil)
-(ac-set-trigger-key "M-i")
+;;(add-to-list 'load-path "~/.emacs.d/plugins/ac/pos-tip")
+;;(add-to-list 'load-path "~/.emacs.d/plugins/ac/fuzzy")
+;;(add-to-list 'load-path "~/.emacs.d/plugins/ac/popup")
+;;(add-to-list 'load-path "~/.emacs.d/plugins/ac/auto-complete")
+;;(require 'auto-complete-config)
+;;(add-to-list 'ac-dictionary-directories
+;;             "~/.emacs.d/plugins/ac/auto-complete/dict")
+;;(ac-config-default)
+;;;;(require 'pos-tip)
+;;(setq ac-quick-help-prefer-pos-tip t)   ;default is t
+;;(setq ac-use-quick-help t)
+;;(setq ac-quick-help-delay 1.0)
+;;(setq ac-dwim t)
+;;(setq ac-fuzzy-enable t)
+;;(setq ac-auto-start nil)
+;;(ac-set-trigger-key "M-i")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

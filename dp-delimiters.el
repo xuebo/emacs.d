@@ -6,6 +6,5 @@
 (setq blink-matching-paren nil)
 (show-paren-mode)
 ;; (setq show-paren-match nil)
-(load-file "~/.emacs.d/plugins/rainbow-delimiter/rainbow-delimiters.el")
-(require 'rainbow-delimiters)
+(require-package 'rainbow-delimiters)
 (global-rainbow-delimiters-mode)

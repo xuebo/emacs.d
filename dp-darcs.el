@@ -1,4 +1,4 @@
-(provide 'init-darcs)
+(provide 'dp-darcs)
 
 (require-package 'darcsum)
 (require-package 'vc-darcs)

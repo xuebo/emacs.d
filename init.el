@@ -48,6 +48,10 @@
 (require 'dp-org)
 (require 'dp-javascript)
 (require 'dp-php)
+(require 'dp-nxml)
+(require 'dp-css)
+(require 'dp-haml)
+(require 'dp-sql)
 
 ;; Allow access from emacsclient
 (require 'server)

@@ -6,6 +6,7 @@
   (require-package 'ac-js2))
 (require-package 'js-comint)
 (require-package 'coffee-mode)
+(require-package 'rainbow-delimiters)
 
 (defcustom preferred-javascript-mode
   (first (remove-if-not #'fboundp '(js2-mode js-mode)))
