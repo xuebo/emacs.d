@@ -15,8 +15,7 @@
 (require 'dp-exec-path)
 
 ;; evil package
-(require-package 'evil)
-(evil-mode t)
+(require 'dp-evil)
 (require 'dp-themes)
 
 (require-package 'wgrep)
