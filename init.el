@@ -54,6 +54,10 @@
 (require 'dp-css)
 (require 'dp-haml)
 (require 'dp-sql)
+(require 'dp-geben)
+
+;;;leisure time
+(require 'dp-leisure)
 
 ;; Allow access from emacsclient
 (require 'server)

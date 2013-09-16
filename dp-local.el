@@ -42,22 +42,6 @@
 (require 'slime)
 (slime-setup '(slime-fancy))
 
-;; geben xdebug and set keys binding
-(add-to-list 'load-path "~/.emacs.d/plugins/geben-0.26")
-(require 'geben)
-(add-hook 'text-mode-hook
- (lambda ()
- (local-set-key (kbd "<F5>") 'geben-run)
- (local-set-key (kbd "<F6>") 'geben-run-to-cursor)
- (local-set-key (kbd "<F8>") 'geben-unset-breakpoint-line)
- (local-set-key (kbd "<F9>") 'geben-set-breakpoint-line)
- (local-set-key (kbd "<F10>") 'geben-step-over)
- (local-set-key (kbd "<F11>") 'geben-step-into)
- (local-set-key (kbd "<F12>") 'geben-mode-help)
- (local-set-key (kbd "C-x C-e") 'geben-eval-expresion)
- )
-)
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -73,16 +57,6 @@
 
 ;; hide toolbar
 (menu-bar-showhide-tool-bar-menu-customize-disable)
-
-;; stardict
-(require 'stardict)
-(global-set-key (kbd "C-c d") 'view-stardict-in-buffer)
-
-;; emms multi-player
-(add-to-list 'load-path "~/.emacs.d/plugins/emms/emms.git/lisp")
-(require 'emms-setup)
-(emms-standard)
-(emms-default-players)
 
 ;; emacs windows init
 (global-set-key [f11] 'win-fullscreen) 
