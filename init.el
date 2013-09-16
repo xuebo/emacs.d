@@ -55,7 +55,7 @@
 (require 'dp-sql)
 (require 'dp-geben)
 
-;;;leisure time
+;;;leisure
 (require 'dp-leisure)
 
 ;; Allow access from emacsclient

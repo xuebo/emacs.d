@@ -1,4 +1,4 @@
-(provide dp-leisure)
+(provide 'dp-leisure)
 
 ;; emms multi-player
 (require-package 'emms)
