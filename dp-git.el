@@ -1,6 +1,7 @@
 (provide 'dp-git)
 
-;;(require-package 'magit)
+(require-package 'magit)
+(require-package 'magit-svn)
 (require-package 'git-gutter-fringe)
 (require-package 'git-blame)
 (require-package 'git-commit-mode)

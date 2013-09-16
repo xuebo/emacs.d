@@ -1,4 +1,4 @@
-(provide 'init-css)
+(provide 'dp-css)
 
 ;;; Colourise CSS colour literals
 (when (eval-when-compile (>= emacs-major-version 24))

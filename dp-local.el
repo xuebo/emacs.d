@@ -1,5 +1,4 @@
 (provide 'dp-local)
-(add-to-list 'default-frame-alist '(cursor-color . "#c71585"))
 
 ;; recursive minibuffers
 (setq enable-recursive-minibuffers t)
@@ -11,8 +10,10 @@
 ;; invoke the focus position when xwindow mouse click
 (setq x-mouse-click-focus-ignore-position nil)
 
+(put 'scroll-left 'disabled nil)
+
 ;; clipboard before the primary selection
-(setq x-select-enable-clipboard t)
+;;(setq x-select-enable-clipboard t)
 
 ;; do not allow auto backup
 (setq make-backup-files nil)
@@ -41,22 +42,6 @@
 (require 'slime)
 (slime-setup '(slime-fancy))
 
-;; smex 
-(add-to-list 'load-path "~/.emacs.d/plugins/smex/smex.git")
-; Not needed if you use package.el
-(require 'smex)
-; Can be omitted. This might cause a (minimal) delay
-; when Smex is auto-initialized on its first run.
-(smex-initialize)
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-;; This is your old M-x.
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-
-;; Php mode 
-(add-to-list 'load-path "~/.emacs.d/plugins/php-mode-1.5.0")
-(require 'php-mode)
-
 ;; geben xdebug and set keys binding
 (add-to-list 'load-path "~/.emacs.d/plugins/geben-0.26")
 (require 'geben)
@@ -73,23 +58,6 @@
  )
 )
 
-;; add auto-complete
-;;(add-to-list 'load-path "~/.emacs.d/plugins/ac/pos-tip")
-;;(add-to-list 'load-path "~/.emacs.d/plugins/ac/fuzzy")
-;;(add-to-list 'load-path "~/.emacs.d/plugins/ac/popup")
-;;(add-to-list 'load-path "~/.emacs.d/plugins/ac/auto-complete")
-;;(require 'auto-complete-config)
-;;(add-to-list 'ac-dictionary-directories
-;;             "~/.emacs.d/plugins/ac/auto-complete/dict")
-;;(ac-config-default)
-;;;;(require 'pos-tip)
-;;(setq ac-quick-help-prefer-pos-tip t)   ;default is t
-;;(setq ac-use-quick-help t)
-;;(setq ac-quick-help-delay 1.0)
-;;(setq ac-dwim t)
-;;(setq ac-fuzzy-enable t)
-;;(setq ac-auto-start nil)
-;;(ac-set-trigger-key "M-i")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -132,7 +100,3 @@
    nil 0 nil "_NET_WM_STATE" 32
    '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0)))
 (win-fullscreen)
-(put 'scroll-left 'disabled nil)
-
-;; org-mode emphasis mark
-(setq org-fontify-emphasized-text t)

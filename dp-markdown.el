@@ -1,4 +1,4 @@
-(provide 'init-markdown)
+(provide 'dp-markdown)
 
 (require-package 'markdown-mode)
 

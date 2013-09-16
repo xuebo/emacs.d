@@ -28,4 +28,4 @@
        (ido-switch-buffer)
      (find-file (ido-completing-read "Open file: " recentf-list nil t))))
 
- (global-set-key [(meta f11)] 'sanityinc/ido-choose-from-recentf))
+ (global-set-key [(meta f7)] 'sanityinc/ido-choose-from-recentf))
