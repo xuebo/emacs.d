@@ -1,9 +1,12 @@
 (provide 'dp-themes)
 
 ;; cursor color
-(set-cursor-color "hotpink")
-(defvar blink-cursor-colors (list  "#7cfc00" "#92c48f" "#ff00ff" "#6785c5"
-				   "#be369c" "#d9ca65" "#f08080" "#ff1493")
+(add-hook 'window-setup-hook '(lambda () (set-cursor-color "red")))
+(add-hook 'after-make-frame-functions 
+	  '(lambda (f) (with-selected-frame 
+			   f (set-cursor-color "red"))))
+(set-cursor-color "red")
+(defvar blink-cursor-colors (list  "yellow" "chartreuse" "DeepPink" "snow")
   "On each blink the cursor will cycle to the next color in this list.")
 
 (setq blink-cursor-count 0)

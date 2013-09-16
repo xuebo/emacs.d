@@ -3,9 +3,9 @@
 (require-package 'auto-complete)
 (require 'auto-complete-config)
 (global-auto-complete-mode t)
-(setq ac-expand-on-auto-complete nil)
-(setq ac-auto-start nil)
-(setq ac-dwim nil) ; To get pop-ups with docs even if a word is uniquely completed
+(setq ac-expand-on-auto-complete t)
+(setq ac-auto-start t)
+(setq ac-dwim t) ; To get pop-ups with docs even if a word is uniquely completed
 
 ;; Use Emacs' built-in TAB completion hooks to trigger AC (Emacs >= 23.2)
 (setq tab-always-indent 'complete)  ;; use 't when auto-complete is disabled

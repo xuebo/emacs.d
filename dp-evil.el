@@ -1,6 +1,16 @@
 (provide 'dp-evil)
 
 (require-package 'evil)
+(setq evil-default-cursor '("hotpink" box))
+ ;; evil-default-cursor
+ ;; evil-normal-state-cursor
+ ;; evil-insert-state-cursor
+ ;; evil-visual-state-cursor
+ ;; evil-replace-state-cursor
+ ;; evil-operator-state-cursor
+ ;; evil-motion-state-cursor
+ ;; evil-emacs-state-cursor
+
 (evil-mode t)
 ;; change mode-line color by evil state
    (lexical-let ((default-color (cons (face-background 'mode-line)

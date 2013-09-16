@@ -1,5 +1,6 @@
 (provide 'dp-local)
 
+(global-hl-line-mode)
 ;; recursive minibuffers
 (setq enable-recursive-minibuffers t)
 
