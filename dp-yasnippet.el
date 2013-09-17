@@ -9,5 +9,5 @@
 
 ;; Map `yas/load-directory' to every element
 ;;(mapc 'yas/load-directory yas/root-directory)
-(require 'dropdown-list)
+(require-package 'dropdown-list)
 (setq yas/prompt-functions '(yas/dropdown-prompt))
