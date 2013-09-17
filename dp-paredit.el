@@ -22,11 +22,6 @@
   (define-key paredit-mode-map [remap backward-kill-sentence] nil))
 
 
-;; Compatibility with other modes
-
-(suspend-mode-during-cua-rect-selection 'paredit-mode)
-
-
 ;; Use paredit in the minibuffer
 ;; TODO: break out into separate package
 ;; http://emacsredux.com/blog/2013/04/18/evaluate-emacs-lisp-in-the-minibuffer/

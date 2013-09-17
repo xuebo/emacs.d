@@ -1,4 +1,4 @@
-(provide 'init-clojure)
+(provide 'dp-clojure)
 
 (require-package 'clojure-mode)
 (require-package 'clojure-test-mode)
