@@ -6,7 +6,7 @@
 	  '(lambda (f) (with-selected-frame 
 			   f (set-cursor-color "red"))))
 (set-cursor-color "red")
-(defvar blink-cursor-colors (list  "yellow" "chartreuse" "DeepPink" "snow")
+(defvar blink-cursor-colors (list  "yellow" "chartreuse" "violet" "snow")
   "On each blink the cursor will cycle to the next color in this list.")
 
 (setq blink-cursor-count 0)
