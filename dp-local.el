@@ -19,29 +19,9 @@
 ;; do not allow auto backup
 (setq make-backup-files nil)
 
-;;; add yasnippet path
-(add-to-list 'load-path
-              "~/.emacs.d/plugins/yasnippet")
-(require 'yasnippet)
-(yas-global-mode t)
-
-;; Develop and keep my snippets under these
-(setq yas/root-directory '("~/.emacs.d/mysnippets"
-			   "~/.emacs.d/plugins/yasnippet/snippets"))
-;; Map `yas/load-directory' to every element
-(mapc 'yas/load-directory yas/root-directory)
-(require 'dropdown-list)
-(setq yas/prompt-functions '(yas/dropdown-prompt))
-
 ;;(require 'cedet)
 ;;(semantic-load-enable-code-helpers)
 ;;(global-set-key [(control tab)] 'semantic-ia-complete-symbol-menu)
-
-;; slime
-(setq inferior-lisp-program "~/hack/sbcl/install.d/bin/sbcl")
-(add-to-list 'load-path "~/hack/slime/slime.cvs/slime")
-(require 'slime)
-(slime-setup '(slime-fancy))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

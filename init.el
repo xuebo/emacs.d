@@ -34,6 +34,7 @@
 (require 'dp-ido)
 (require 'dp-hippie-expand)
 (require 'dp-auto-complete)
+(require 'dp-yasnippet)
 (require 'dp-windows)
 (require 'dp-sessions)
 (require 'dp-font)

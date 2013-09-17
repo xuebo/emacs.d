@@ -10,3 +10,9 @@
 (require 'dp-haml)
 (require 'dp-sql)
 (require 'dp-geben)
+
+(require 'dp-paredit)
+(require 'dp-elisp)
+(require 'dp-slime)
+(require 'dp-clojure)
+(require 'dp-cl)
