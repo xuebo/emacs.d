@@ -1,8 +1,5 @@
 (provide 'dp-yasnippet)
 
-;;; add yasnippet path
-(add-to-list 'load-path
-              "~/.emacs.d/plugins/yasnippet")
 (require-package 'yasnippet)
 (yas-global-mode t)
 
@@ -11,6 +8,6 @@
       (expand-file-name "/mysnippets" user-emacs-directory))
 
 ;; Map `yas/load-directory' to every element
-(mapc 'yas/load-directory yas/root-directory)
+;;(mapc 'yas/load-directory yas/root-directory)
 (require 'dropdown-list)
 (setq yas/prompt-functions '(yas/dropdown-prompt))
