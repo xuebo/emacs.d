@@ -5,3 +5,4 @@
 (require 'emms-setup)
 (emms-standard)
 (emms-default-players)
+(require 'dp-douban)
