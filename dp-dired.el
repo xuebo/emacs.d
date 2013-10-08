@@ -8,3 +8,5 @@
 (after-load 'dired
   (require 'dired+)
   (setq dired-recursive-deletes 'top))
+
+(add-hook 'dired-mode-hook 'hl-line-mode)

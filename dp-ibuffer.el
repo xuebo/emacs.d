@@ -7,7 +7,10 @@
   (unless (eq ibuffer-sorting-mode 'filename/process)
     (ibuffer-do-sort-by-filename/process)))
 
-(add-hook 'ibuffer-hook 'ibuffer-set-up-preferred-filters)
+(add-hook 'ibuffer-hook
+	  'ibuffer-set-up-preferred-filters)
+
+(add-hook 'ibuffer-hook 'hl-line-mode)
 
 (after-load 'ibuffer
   ;; Use human readable Size column instead of original one

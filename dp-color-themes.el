@@ -17,7 +17,7 @@
    (default ((t (nil))))
    (bold ((t (:bold t :foreground "light gray"))))
    (bold-italic ((t (:italic t :bold t :foreground "cyan"))))
-   (calendar-today-face ((t (:underline t :foreground "white"))))
+   (calendar-today-face ((t (:underline t :foreground "#00ff00"))))
    (custom-button-face ((t (nil))))
    (custom-changed-face ((t (:background "blue" :foreground "white"))))
    (custom-documentation-face ((t (nil))))

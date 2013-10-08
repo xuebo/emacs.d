@@ -1,4 +1,8 @@
-(provide 'dp-slime)
+;;; package --- Summary
+;;; This is slime
+;;; Commentary:
+;; dp-slime
+;;; Code:
 
 (require-package 'slime)
 
@@ -47,3 +51,6 @@
   (add-hook 'slime-repl-mode-hook 'sanityinc/set-up-slime-repl-auto-complete)
   (after-load 'auto-complete
     (add-to-list 'ac-modes 'slime-repl-mode)))
+
+(provide 'dp-slime)
+;;; dp-slime.el ends here

@@ -25,7 +25,9 @@
                                   collect entry)))
 
 
-(add-auto-mode 'js-mode "\\.json\\'")
+(add-auto-mode 'js-mode
+	       "\\.json\\'"
+	       "\\.pac\\'")
 
 
 ;; js2-mode
@@ -64,7 +66,20 @@
 ;; Run and interact with an inferior JS via js-comint.el
 ;; ---------------------------------------------------------------------------
 
-(setq inferior-js-program-command "js")
+(require 'comint)
+(setq inferior-js-program-command "node")
+(setenv "NODE_NO_READLINE" "1")
+(setq inferior-js-mode-hook
+      (lambda ()
+        ;; We like nice colors
+        (ansi-color-for-comint-mode-on)
+        ;; Deal with some prompt nonsense
+        (add-to-list
+	 'comint-preoutput-filter-functions
+	 (lambda (output)
+	   (replace-regexp-in-string
+	    ".*1G\.\.\..*5G" "..."
+	    (replace-regexp-in-string ".*1G.*3G" "&gt;" output))))))
 
 (defvar inferior-js-minor-mode-map (make-sparse-keymap))
 (define-key inferior-js-minor-mode-map "\C-x\C-e" 'js-send-last-sexp)
@@ -88,4 +103,4 @@
   (require-package 'skewer-mode)
   (after-load 'skewer-mode
     (add-hook 'skewer-mode-hook
-              (lambda () (inferior-js-keys-mode -1)))))
+	      (lambda () (inferior-js-keys-mode -1)))))
