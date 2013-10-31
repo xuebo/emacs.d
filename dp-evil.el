@@ -28,16 +28,24 @@
 		(set-face-background 'mode-line (car color))
 		(set-face-foreground 'mode-line (cdr color))))))
 
+(defun my-move-key (keymap-from keymap-to key)
+  "Moves key binding from one keymap to another, deleting from the old location. "
+  (define-key keymap-to key (lookup-key keymap-from key))
+  (define-key keymap-from key nil))
+(my-move-key evil-motion-state-map evil-normal-state-map (kbd "RET"))
+(my-move-key evil-motion-state-map evil-normal-state-map " ")
+
 (defun wicked/evil-emacs-state-init (hooks)
   (mapc (lambda (hook)
 	  (add-hook
 	   hook
-	   (lambda () (evil-emacs-state))))
+	   (lambda () (evil-motion-state))))
 	hooks))
 
 (wicked/evil-emacs-state-init
  (list 'dired-mode-hook
        'geben-mode-hook
+       'ibuffer-mode-hook
        'douban-music-mode-hook))
 
 (provide 'dp-evil)
