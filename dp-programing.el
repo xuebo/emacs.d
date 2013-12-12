@@ -12,6 +12,7 @@
 (require 'dp-geben)
 
 (require 'dp-paredit)
+(require 'dp-haskell)
 (require 'dp-elisp)
 (require 'dp-slime)
 (require 'dp-clojure)

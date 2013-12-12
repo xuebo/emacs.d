@@ -45,8 +45,7 @@
 (wicked/evil-emacs-state-init
  (list 'dired-mode-hook
        'geben-mode-hook
-       'ibuffer-mode-hook
-       'douban-music-mode-hook))
+       'ibuffer-mode-hook))
 
 (provide 'dp-evil)
 ;;; de-evil.el ends here.

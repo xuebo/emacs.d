@@ -46,6 +46,9 @@
 (require 'dp-git)
 
 ;;;program
+(require 'dp-tex)
+
+;;;program
 (require 'dp-programing)
 
 ;;;leisure
