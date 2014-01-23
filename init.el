@@ -2,7 +2,13 @@
 
 (defvar *is-a-mac* nil)
 
-(add-to-list 'load-path user-emacs-directory)
+(setq dp-init (concat user-emacs-directory "/dp-init"))
+(add-to-list 'load-path user-emacs-directory)             
+(add-to-list 'load-path dp-init)             
+(add-to-list 'load-path (concat dp-init "/dp-ui"))             
+(add-to-list 'load-path (concat dp-init "/dp-program"))             
+(add-to-list 'load-path (concat dp-init "/dp-entertainment"))             
+
 ;; Wow, measure start time
 (require 'dp-benchmarking) 
 
