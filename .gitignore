@@ -1,0 +1,9 @@
+# ignore hide files <except .gitignore>
+[.]*
+![.]gitignore
+
+#ignore temp files
+*~
+
+#ignore emacs sessions
+session*
