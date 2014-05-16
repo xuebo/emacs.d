@@ -6,6 +6,11 @@
 
 # ignore temp files
 *~
+\#*
+
+*[.]cache
+*[.]eld
+*[.]el#
 
 #ignore emacs sessions
 session*

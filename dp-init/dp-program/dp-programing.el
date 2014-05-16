@@ -8,6 +8,7 @@
 (require 'dp-nxml)
 (require 'dp-css)
 (require 'dp-haml)
+(require 'dp-web)
 (require 'dp-sql)
 (require 'dp-geben)
 

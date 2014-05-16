@@ -20,6 +20,9 @@
 ;; Set up $PATH 
 (require 'dp-exec-path)
 
+;; manage project
+(require 'dp-projectile)
+
 ;; evil package
 (require 'dp-evil)
 (require 'dp-themes)
