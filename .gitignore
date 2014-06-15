@@ -4,6 +4,9 @@
 [.]*
 ![.]gitignore
 
+# ignore compiled files
+*[.]elc
+
 # ignore temp files
 *~
 \#*
