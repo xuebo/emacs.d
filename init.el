@@ -50,6 +50,9 @@
 (require 'dp-mmm)
 (require 'dp-growl)
 
+;;; email client mu4e
+(require 'dp-email)
+
 ;;; vc
 (require 'dp-darcs)
 (require 'dp-git)
