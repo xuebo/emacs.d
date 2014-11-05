@@ -1,6 +1,8 @@
 ;;; provide dp-web
+(provide 'dp-web)
 
 (require-package 'web-mode)
 
-(provide 'dp-web)
+(add-auto-mode 'web-mode ".tpl")
+
 ;;;

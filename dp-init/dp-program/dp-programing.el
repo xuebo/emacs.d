@@ -1,5 +1,7 @@
 (provide 'dp-programing)
 
+
+(which-function-mode 1)
 (require 'dp-csharp)
 (require 'dp-markdown)
 (require 'dp-org)

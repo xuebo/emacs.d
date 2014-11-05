@@ -2,7 +2,8 @@
 
 (require-package 'todochiku)
 
-(require 'todochiku) ;; growl notifications when compilation finishes
+;;(require 'todochiku) ;; growl notifications when compilation finishes
+
 (setq todochiku-icons-directory
       (expand-file-name "site-lisp/todochiku-icons" user-emacs-directory))
 

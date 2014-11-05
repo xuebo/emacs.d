@@ -1,7 +1,7 @@
 (provide 'dp-yasnippet)
 
 (require-package 'yasnippet)
-(yas-global-mode t)
+;;(yas-global-mode t)
 
 ;; Develop and keep my snippets under these
 (setq yas/root-directory 

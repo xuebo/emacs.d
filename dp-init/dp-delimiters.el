@@ -7,4 +7,4 @@
 (show-paren-mode)
 ;; (setq show-paren-match nil)
 (require-package 'rainbow-delimiters)
-(global-rainbow-delimiters-mode)
+(rainbow-delimiters-mode)
