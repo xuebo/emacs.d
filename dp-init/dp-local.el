@@ -1,17 +1,18 @@
 (provide 'dp-local)
 
 ;; default file encoding. unix utf8
-(add-hook 'find-file-hook 'find-file-check-line-endings)
-(defun dos-file-endings-p ()
-  (string-match "dos" (symbol-name buffer-file-coding-system)))
-(defun find-file-check-line-endings ()
-  (when (dos-file-endings-p)
-    (set-buffer-file-coding-system 'undecided-unix)
-    (set-buffer-modified-p nil)))
+;; (add-hook 'find-file-hook 'find-file-check-line-endings)
+;; (defun dos-file-endings-p ()
+;;   (string-match "dos" (symbol-name buffer-file-coding-system)))
+;; (defun find-file-check-line-endings ()
+;;   (when (dos-file-endings-p)
+;;     (set-buffer-file-coding-system 'undecided-unix)
+;;     (set-buffer-modified-p nil)))
 
 ;; (global-hl-line-mode)
 ;; recursive minibuffers
 (setq enable-recursive-minibuffers t)
+;;(setq require-final-newline t)
 
 ;; enabled confirm message for `switch-to-buffer' non existent file
 ;; or buffer
@@ -49,7 +50,7 @@
 (menu-bar-showhide-tool-bar-menu-customize-disable)
 
 ;; emacs windows init
-(global-set-key [f11] 'win-fullscreen) 
+;; (global-set-key [f11] 'win-fullscreen) 
 (defun win-fullscreen ()
   (interactive)
   (x-send-client-message
@@ -73,4 +74,5 @@
           (revert-buffer t t t) )))
     (message "Refreshed open files.") )
 
-(win-fullscreen)
+;;(win-fullscreen)
+

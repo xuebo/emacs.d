@@ -7,6 +7,11 @@
 (setq projectile-indexing-method 'native)
 (setq projectile-enable-caching t)
 
+(require 'dp-helm)
+(require-package 'helm-projectile)
+(setq projectile-completion-system 'helm)
+(helm-projectile-on)
+
 (defun projectile-phpgrep ()
   "Perform rgrep in the project."
   (interactive)

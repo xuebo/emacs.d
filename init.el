@@ -2,8 +2,8 @@
 
 (defvar *is-a-mac* nil)
 
-(setq dp-init (concat user-emacs-directory "/dp-init"))
-(add-to-list 'load-path user-emacs-directory)             
+(setq dp-init (concat user-emacs-directory "dp-init"))
+;;(add-to-list 'load-path user-emacs-directory)             
 (add-to-list 'load-path dp-init)             
 (add-to-list 'load-path (concat dp-init "/dp-ui"))             
 (add-to-list 'load-path (concat dp-init "/dp-program"))             
@@ -19,6 +19,9 @@
 (require 'dp-elpa)      
 ;; Set up $PATH 
 (require 'dp-exec-path)
+
+;; helm package
+(require 'dp-helm)
 
 ;; manage project
 (require 'dp-projectile)

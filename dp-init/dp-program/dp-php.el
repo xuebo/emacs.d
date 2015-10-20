@@ -2,6 +2,11 @@
 
 (require-package 'php-mode)
 
+(add-to-list 'auto-mode-alist '("\\.inc\\'" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.module\\'" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.install\\'" . php-mode))
+
+;; use php auto yasnippets for php standard functions.
 (let (( php-yas-path
 	(concat user-emacs-directory
 		"/include/php-auto-yasnippets/")))
@@ -24,7 +29,9 @@
   (c-set-offset 'case-label 2)
   (c-set-offset 'arglist-close 0))
 
-(add-hook 'php-mode-hook 'php-enable-symfony2-coding-style)
+;; (add-hook 'php-mode-hook 'php-enable-symfony2-coding-style)
+;; (remove-hook 'php-mode-hook 'php-enable-symfony2-coding-style)
+(add-hook 'php-mode-hook 'wicked/php-mode-init)
 (add-hook 'php-mode-hook 'yas-minor-mode-on)
 
 (provide 'dp-php)
