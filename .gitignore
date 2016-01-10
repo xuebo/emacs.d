@@ -29,3 +29,4 @@ url/
 # ignore frame and tramp temp files
 frame-restore-parameters
 tramp
+image-dired

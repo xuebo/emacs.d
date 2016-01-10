@@ -44,8 +44,12 @@
 
 (wicked/evil-emacs-state-init
  (list 'dired-mode-hook
-       'geben-mode-hook
-       'ibuffer-mode-hook))
+       'ibuffer-mode-hook
+       'geben-mode-hook))
+
+;; make evil-mode enable
+(add-hook 'ibuffer-mode-hook 'turn-on-evil-mode)
+
 
 (provide 'dp-evil)
 ;;; de-evil.el ends here.

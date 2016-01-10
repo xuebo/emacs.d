@@ -4,10 +4,9 @@
 (require-package 'magit-svn)
 (require-package 'git-gutter-fringe)
 (require-package 'git-blame)
-(require-package 'git-commit-mode)
-(require-package 'git-rebase-mode)
-(require-package 'gitignore-mode)
+(require-package 'gitattributes-mode)
 (require-package 'gitconfig-mode)
+(require-package 'gitignore-mode)
 
 (setq-default
  magit-save-some-buffers nil
@@ -39,7 +38,7 @@
 ;;; When we start working on git-backed files, use git-wip if available
 
 (after-load 'vc-git
-  (global-magit-wip-save-mode)
+  ;;(global-magit-wip-save-mode)
   (diminish 'magit-wip-save-mode))
 
 
