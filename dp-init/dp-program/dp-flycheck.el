@@ -1,8 +1,8 @@
 (provide 'dp-flycheck)
 
-(when (eval-when-compile (>= emacs-major-version 24))
-  (require-package 'flycheck)
-  (add-hook 'after-init-hook 'global-flycheck-mode))
+;; (when (eval-when-compile (>= emacs-major-version 24))
+;;   (require-package 'flycheck)
+;;   (add-hook 'after-init-hook 'global-flycheck-mode))
 
 ;; todo why not func???
 ;; not found flycheck-declare-checker ???

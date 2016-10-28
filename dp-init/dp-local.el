@@ -39,6 +39,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ede-project-directories (quote ("/home/xb/work/c"))))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -47,7 +48,8 @@
  )
 
 ;; hide toolbar
-(menu-bar-showhide-tool-bar-menu-customize-disable)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
 
 ;; emacs windows init
 ;; (global-set-key [f11] 'win-fullscreen) 
@@ -65,14 +67,14 @@
    nil 0 nil "_NET_WM_STATE" 32
    '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0)))
 
- (defun revert-all-buffers ()
-    "Refreshes all open buffers from their respective files."
-    (interactive)
-    (dolist (buf (buffer-list))
-      (with-current-buffer buf
-        (when (and (buffer-file-name) (file-exists-p (buffer-file-name)) (not (buffer-modified-p)))
-          (revert-buffer t t t) )))
-    (message "Refreshed open files.") )
+(defun revert-all-buffers ()
+  "Refreshes all open buffers from their respective files."
+  (interactive)
+  (dolist (buf (buffer-list))
+    (with-current-buffer buf
+      (when (and (buffer-file-name) (file-exists-p (buffer-file-name)) (not (buffer-modified-p)))
+	(revert-buffer t t t) )))
+  (message "Refreshed open files.") )
 
 ;;(win-fullscreen)
 
