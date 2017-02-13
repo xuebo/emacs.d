@@ -43,11 +43,11 @@
 ;; 			    (define-key php-mode-map  (kbd "C-]") 'ac-php-find-symbol-at-point)   ;goto define
 ;; 			    (define-key php-mode-map  (kbd "C-t") 'ac-php-location-stack-back   ) ;go back
 ;; 			    ))
-(add-hook 'php-mode-hook
-	  '(lambda ()
-	     (require 'company-php)
-	     (company-mode t)
-	     (add-to-list 'company-backends 'company-ac-php-backend )))
+;; (add-hook 'php-mode-hook
+;; 	  '(lambda ()
+;; 	     (require 'company-php)
+;; 	     (company-mode t)
+;; 	     (add-to-list 'company-backends 'company-ac-php-backend )))
 
 (provide 'dp-php)
 ;;; dp-php.el ends here
