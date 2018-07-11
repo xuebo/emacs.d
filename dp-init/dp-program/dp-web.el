@@ -17,6 +17,13 @@
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.ctp\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.dwt\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.selmer.clj\\'" . web-mode))
+
+;;(add-to-list 'web-mode-engines-alist '("selmer" . "\\.selmer\\."))
+(setq web-mode-engines-alist
+      '(("php"    . "\\.phtml\\'")
+	("selmer" . "\\.selmer\\.")
+        ("blade"  . "\\.blade\\.")))
 
 (add-hook 'web-mode-hook 'dp/web-mode-init)
 ;;;

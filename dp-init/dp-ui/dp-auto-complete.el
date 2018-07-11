@@ -2,14 +2,23 @@
 
 (require-package 'auto-complete)
 (require 'auto-complete-config)
+
 (global-auto-complete-mode t)
-(setq ac-expand-on-auto-complete t)
+(setq ac-expand-on-auto-complete 1)
+(ac-set-trigger-key "TAB")
 (setq ac-auto-start t)
+(ac-flyspell-workaround)
+
+;; (define-key ac-mode-map (kbd "C-/") 'auto-complete)
+;; (define-key ac-completing-map "C-/" 'ac-complete)
+
 (setq ac-dwim t) ; To get pop-ups with docs even if a word is uniquely completed
 
 ;; Use Emacs' built-in TAB completion hooks to trigger AC (Emacs >= 23.2)
 (setq tab-always-indent 'complete)  ;; use 't when auto-complete is disabled
-(add-to-list 'completion-styles 'initials t)
+(setq tab-always-indent nil)
+
+;;(add-to-list 'completion-styles 'initials t)
 
 ;; TODO: find solution for php, c++, haskell modes where TAB always does something
 
@@ -23,7 +32,7 @@
 (defun set-auto-complete-as-completion-at-point-function ()
   (add-to-list 'completion-at-point-functions 'sanityinc/auto-complete-at-point))
 
-(add-hook 'auto-complete-mode-hook 'set-auto-complete-as-completion-at-point-function)
+;;(add-hook 'auto-complete-mode-hook 'set-auto-complete-as-completion-at-point-function)
 
 
 (set-default 'ac-sources

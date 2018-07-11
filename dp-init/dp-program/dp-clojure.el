@@ -59,8 +59,25 @@
   (add-hook 'clojure-mode-hook 'sanityinc/lisp-setup)
   (add-hook 'clojure-mode-hook 'subword-mode))
 
+(setq cider-cljs-lein-repl
+      "(do (require 'figwheel-sidecar.repl-api)
+           (figwheel-sidecar.repl-api/start-figwheel!)
+           (figwheel-sidecar.repl-api/cljs-repl))")
 
+(defun cider-figwheel-repl ()
+  (interactive)
+  (save-some-buffers)
+  (with-current-buffer (cider-current-repl-buffer)
+    (goto-char (point-max))
+    (insert "(require 'figwheel-sidecar.repl-api)
+             (figwheel-sidecar.repl-api/start-figwheel!) ; idempotent
+             (figwheel-sidecar.repl-api/cljs-repl)")
+    (cider-repl-return)))
+
+(global-set-key (kbd "C-c C-j") #'cider-jack-in)
+(global-set-key (kbd "C-c C-f") #'cider-figwheel-repl)
+(global-set-key (kbd "C-c C-q") #'cider-quit)
 
 ;; Use clojure-mode for clojurescript, since clojurescript-mode
 ;; pulls in Slime
-(add-auto-mode 'clojure-mode "\\.cljs\\'")
+;;(add-auto-mode 'clojure-mode "\\.cljs\\'")

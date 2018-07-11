@@ -20,3 +20,6 @@
 (require 'dp-slime)
 (require 'dp-clojure)
 (require 'dp-cl)
+(require 'dp-java)
+
+(require 'dp-http)

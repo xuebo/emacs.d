@@ -30,6 +30,11 @@
 (require 'dp-evil)
 (require 'dp-themes)
 
+;; ace window
+(require 'dp-ace-window)
+
+(require 'dp-neotree)
+
 (require-package 'wgrep)
 (require-package 'project-local-variables)
 (require-package 'diminish)
