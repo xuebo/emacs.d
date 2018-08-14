@@ -21,6 +21,8 @@ session*
 # ignore many directories
 emms/
 DouBanMusic/
+meghanada/
+recentf
 ac-comphist.dat
 elpa/
 eshell/

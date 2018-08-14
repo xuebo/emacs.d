@@ -9,16 +9,16 @@
 (add-to-list 'auto-mode-alist '("\\.install\\'" . php-mode))
 
 ;; use php auto yasnippets for php standard functions.
-(let (( php-yas-path
-	(concat user-emacs-directory
-		"/include/php-auto-yasnippets/")))
-  (if (file-exists-p php-yas-path)
-      (progn
-	(load-file (concat php-yas-path "php-auto-yasnippets.el"))
-	(require 'php-auto-yasnippets)
-	(setq php-auto-yasnippet-php-program
-	      (concat php-yas-path "Create-PHP-YASnippet.php"))
-	(define-key php-mode-map (kbd "C-c C-y") 'yas/create-php-snippet))))
+;; (let (( php-yas-path
+;; 	(concat user-emacs-directory
+;; 		"/include/php-auto-yasnippets/")))
+;;   (if (file-exists-p php-yas-path)
+;;       (progn
+;; 	(load-file (concat php-yas-path "php-auto-yasnippets.el"))
+;; 	(require 'php-auto-yasnippets)
+;; 	(setq php-auto-yasnippet-php-program
+;; 	      (concat php-yas-path "Create-PHP-YASnippet.php"))
+;; 	(define-key php-mode-map (kbd "C-c C-y") 'yas/create-php-snippet))))
 
 (defun wicked/php-mode-init ()
   "Set some buffer-local variables."
