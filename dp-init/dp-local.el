@@ -80,5 +80,5 @@
   '(eclim-eclipse-dirs '("/home/xb/bin/eclipse.d/eclipse"))
   '(eclim-executable "/home/xb/bin/eclipse.d/eclipse/plugins/org.eclim_2.7.1/bin/eclim"))
 
-;;(win-fullscreen)
+(win-fullscreen)
 

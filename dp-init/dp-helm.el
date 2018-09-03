@@ -1,6 +1,6 @@
 (provide 'dp-helm)
 
-(require-package 'helm-package)
+(require-package 'helm)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-c h o") 'helm-occur)
 (global-set-key (kbd "C-c h f") 'helm-semantic-or-imenu)

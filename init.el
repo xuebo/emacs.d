@@ -16,7 +16,7 @@
 ;; Must come before elpa, as it may provide package.el
 (require 'dp-site-lisp)
 ;; Machinery for installing required packages
-(require 'dp-elpa)      
+(require 'dp-elpa)
 ;; Set up $PATH 
 (require 'dp-exec-path)
 
@@ -36,7 +36,7 @@
 (require 'dp-neotree)
 
 (require-package 'wgrep)
-(require-package 'project-local-variables)
+;(require-package 'project-local-variables)
 (require-package 'diminish)
 (require-package 'scratch)
 (require-package 'mwe-log-commands)
@@ -62,7 +62,7 @@
 
 (require 'dp-mmm)
 
-(require 'dp-growl)
+;(require 'dp-growl)
 
 ;;; email client mu4e
 (require 'dp-email)

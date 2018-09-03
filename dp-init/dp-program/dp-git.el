@@ -3,7 +3,7 @@
 (require-package 'magit)
 (require-package 'magit-svn)
 (require-package 'git-gutter-fringe)
-(require-package 'git-blame)
+; (require-package 'git-blame)
 (require-package 'gitattributes-mode)
 (require-package 'gitconfig-mode)
 (require-package 'gitignore-mode)

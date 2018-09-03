@@ -4,8 +4,8 @@
 ;;Emacs.pane.menubar.background: darkGrey
 ;;Emacs.pane.menubar.foreground: black"
   (interactive)
-;  (setq term-default-fg-color "white"
-;	 term-default-bg "black")
+  ;; (setq term-default-fg-color "white"
+  ;; 	 term-default-bg "black")
   (color-theme-install
    '(color-theme-xuebo-black-white
      ((foreground-color . "white smoke")

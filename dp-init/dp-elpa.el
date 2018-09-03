@@ -34,19 +34,27 @@ ARCHIVE is the string name of the package archive.")
 
 ;;; Standard package repositories
 
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+;(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 ;; We include the org repository for completeness, but don't normally
 ;; use it.
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 
-(when (< emacs-major-version 24)
-  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+;(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+
+;(when (< emacs-major-version 24) (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 
 ;;; Also use Melpa for most packages
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-
+;; (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 ;; (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+
+;;; package mirror for china
+(setq package-archives '())
+;; (add-to-list 'package-archives '("popkit" . "http://elpa.popkit.org/packages/"))
+(add-to-list 'package-archives '("org" . "http://elpa.emacs-china.org/org/"))
+(add-to-list 'package-archives '("gnu" . "http://elpa.emacs-china.org/gnu/"))
+(add-to-list 'package-archives '("melpa" . "http://elpa.emacs-china.org/melpa/"))
+(add-to-list 'package-archives '("marmalade" . "http://elpa.emacs-china.org/marmalade/"))
+	
 
 
 ;; But don't take Melpa versions of certain packages
@@ -69,4 +77,4 @@ re-downloaded in order to locate PACKAGE."
         (require-package package min-version t)))))
 
 ;;; Fire up package.el
-(package-initialize)
+;(package-initialize)

@@ -2,7 +2,7 @@
 
 (when (< emacs-major-version 24)
   (require-package 'org))
-(require-package 'org-fstree)
+;(require-package 'org-fstree)
 
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
