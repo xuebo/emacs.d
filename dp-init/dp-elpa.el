@@ -77,4 +77,4 @@ re-downloaded in order to locate PACKAGE."
         (require-package package min-version t)))))
 
 ;;; Fire up package.el
-;(package-initialize)
+(package-initialize)

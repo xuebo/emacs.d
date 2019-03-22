@@ -1,16 +1,11 @@
-;(require-package 'eclim)
 (require-package 'auto-complete)
-;;(require-package 'ac-emacs-eclim)
 
 
 (defun my-java-mode-hook ()
   (help-at-pt-set-timer)
   (ac-config-default)
   (setq ac-auto-start nil)
-  ;(ac-emacs-eclim-config)
-  (remove 'ac-source-clang 'ac-sources)
-  ;; (eclim-mode t)
-  )
+  (remove 'ac-source-clang 'ac-sources))
 
 (defun wicked/java-mode-init ()
   "Set some buffer-local variables."
@@ -27,26 +22,27 @@
     (c-set-offset 'case-label 2)
     (c-set-offset 'arglist-close 0))
 
-;; (setq eclimd-autostart nil)
-;; (setq eclim-auto-save t
-;;       eclimd-wait-for-process nil
-;;       eclimd-default-workspace "~/work/eclipse/"
-;;       help-at-pt-display-when-idle t
-;;       help-at-pt-timer-delay 0.1
-;;       ac-delay 0.5)
 
-(add-hook 'java-mode-hook 'wicked/java-mode-init)
-(add-hook 'java-mode-hook 'my-java-mode-hook)
+(setq help-at-pt-display-when-idle t
+      help-at-pt-timer-delay 0.1
+      ac-delay 0.5)
+
+;;(add-hook 'java-mode-hook 'wicked/java-mode-init)
+;;(add-hook 'java-mode-hook 'my-java-mode-hook)
 
 (require-package 'meghanada)
 (add-hook 'java-mode-hook
           (lambda ()
             ;; meghanada-mode on
-            (meghanada-mode t)
-            (setq c-basic-offset 2)
+	    (meghanada-mode t)
+            (flycheck-mode +1)
+            (setq c-basic-offset 4)
+	    (setq indent-tabs-mode nil)
+	    (infer-indentation-style)
+            (setq smart-operator-mode t)
             ;; use code format
             ;;(add-hook 'before-save-hook 'meghanada-code-beautify-before-save)
-			))
+            ))
 
 (add-to-list 'file-name-handler-alist '("\\.class$" . javap-handler))
 

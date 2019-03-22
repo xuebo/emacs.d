@@ -8,6 +8,6 @@
       (expand-file-name "/mysnippets" user-emacs-directory))
 
 ;; Map `yas/load-directory' to every element
-(mapc 'yas/load-directory yas/root-directory)
+;(mapc 'yas/load-directory yas/root-directory)
 ;(require-package 'dropdown-list)
-(setq yas/prompt-functions '(yas/dropdown-prompt))
+;(setq yas/prompt-functions '(yas/dropdown-prompt))

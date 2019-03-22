@@ -7,6 +7,7 @@
 (require-package 'js-comint)
 (require-package 'coffee-mode)
 (require-package 'rainbow-delimiters)
+(require-package 'rjsx-mode)
 
 (defcustom preferred-javascript-mode
   (first (remove-if-not #'fboundp '(js2-mode js-mode)))
@@ -15,8 +16,8 @@
   :group 'programming
   :options '(js2-mode js-mode))
 
-(defvar preferred-javascript-indent-level 4)
-(setq js-indent-level 4)
+(defvar preferred-javascript-indent-level 2)
+(setq js-indent-level 2)
 
 ;; Need to first remove from list if present, since elpa adds entries too, which
 ;; may be in an arbitrary order

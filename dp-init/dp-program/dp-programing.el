@@ -1,5 +1,10 @@
 (provide 'dp-programing)
+(require-package 'electric-spacing)
+(require-package 'lsp-mode)
 
+(require 'lsp-mode)
+;(add-hook 'java-mode-hook #'lsp)
+;(add-hook 'js-mode-hook #'lsp)
 
 (which-function-mode 1)
 (require 'dp-csharp)
@@ -21,6 +26,8 @@
 (require 'dp-clojure)
 (require 'dp-cl)
 (require 'dp-java)
+(require 'dp-solidity)
 
 (require 'dp-http)
+(require 'dp-yaml)
 

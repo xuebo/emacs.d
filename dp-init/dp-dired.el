@@ -1,6 +1,7 @@
 (provide 'dp-dired)
 
 ;(require-package 'dired+)
+(require-package 'diredful)
  
 (setq diredp-hide-details-initially-flag nil)
 (setq global-dired-hide-details-mode -1)
