@@ -2,6 +2,14 @@
 
 (defvar *is-a-mac* nil)
 
+;; use command as meta in mac
+(when (eq system-type 'darwin)
+  (setq *is-a-mac* t))
+
+(when *is-a-mac* 
+  (setq mac-command-modifier 'meta)
+  (setq mac-option-modifier nil))
+
 (setq dp-init (concat user-emacs-directory "dp-init"))
 ;;(add-to-list 'load-path user-emacs-directory)             
 (add-to-list 'load-path dp-init)             
