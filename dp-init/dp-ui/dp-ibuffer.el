@@ -12,6 +12,10 @@
 
 (add-hook 'ibuffer-hook 'hl-line-mode)
 
+(add-hook 'ibuffer-hook (lambda ()
+			  (progn
+			    (local-unset-key (kbd "M-o")))))
+
 (after-load 'ibuffer
   ;; Use human readable Size column instead of original one
   (define-ibuffer-column size-h
