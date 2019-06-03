@@ -10,6 +10,9 @@
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier nil))
 
+(setq auto-revert-interval 1)
+(global-auto-revert-mode t)
+
 (setq dp-init (concat user-emacs-directory "dp-init"))
 ;;(add-to-list 'load-path user-emacs-directory)             
 (add-to-list 'load-path dp-init)             

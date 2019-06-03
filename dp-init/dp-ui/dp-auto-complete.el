@@ -56,3 +56,45 @@
 
 (setq dabbrev-friend-buffer-function 'sanityinc/dabbrev-friend-buffer)
 
+
+
+
+
+
+
+
+;;; use company mode instead auto-complete
+;; (require-package 'company)
+;; (require-package 'company-quickhelp)
+
+
+;; (use-package company
+;;   :diminish company-mode
+;;   :ensure t
+;;   :init (add-hook 'after-init-hook 'global-company-mode)
+;;   :config
+;;   (setq company-idle-delay              0.1
+;; 	company-minimum-prefix-length   2
+;; 	company-show-numbers            t
+;; 	company-tooltip-limit           20
+;; 	company-dabbrev-downcase        nil
+;; 	company-backends                '((company-gtags))
+;; 	)
+;;   :bind ("s-;" . company-complete-common))
+
+;; (add-hook 'after-init-hook 'global-company-mode)
+;; (add-hook 'company-mode-hook 'company-quickhelp-mode)
+
+;; (add-to-list 'company-backends 'company-dabbrev-code) 
+;; (add-to-list 'company-backends 'company-yasnippet)
+;; (add-to-list 'company-backends 'company-files)
+
+;;(global-set-key (kbd "M-/") 'company-complete)
+
+
+
+
+
+
+
+

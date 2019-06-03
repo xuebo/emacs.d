@@ -4,7 +4,8 @@
 
 (require 'lsp-mode)
 ;(add-hook 'java-mode-hook #'lsp)
-;(add-hook 'js-mode-hook #'lsp)
+(add-hook 'js-mode-hook #'lsp)
+(add-hook 'web-mode-hook #'lsp)
 
 (which-function-mode 1)
 (require 'dp-csharp)

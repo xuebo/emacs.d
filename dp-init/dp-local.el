@@ -53,19 +53,19 @@
 
 ;; emacs windows init
 ;; (global-set-key [f11] 'win-fullscreen) 
-(defun win-fullscreen ()
-  (interactive)
-  (x-send-client-message
-   nil 0 nil "_NET_WM_STATE" 32
-   '(2 "_NET_WM_STATE_FULLSCREEN" 0)))
-(defun win-maximized ()
-  (interactive)
-  (x-send-client-message
-   nil 0 nil "_NET_WM_STATE" 32
-   '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0))
-  (x-send-client-message
-   nil 0 nil "_NET_WM_STATE" 32
-   '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0)))
+;; (defun win-fullscreen ()
+;;   (interactive)
+;;   (x-send-client-message
+;;    nil 0 nil "_NET_WM_STATE" 32
+;;    '(2 "_NET_WM_STATE_FULLSCREEN" 0)))
+;; (defun win-maximized ()
+;;   (interactive)
+;;   (x-send-client-message
+;;    nil 0 nil "_NET_WM_STATE" 32
+;;    '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0))
+;;   (x-send-client-message
+;;    nil 0 nil "_NET_WM_STATE" 32
+;;    '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0)))
 
 (defun revert-all-buffers ()
   "Refreshes all open buffers from their respective files."
@@ -76,9 +76,9 @@
 	(revert-buffer t t t) )))
   (message "Refreshed open files.") )
 
-(custom-set-variables
-  '(eclim-eclipse-dirs '("/home/xb/bin/eclipse.d/eclipse"))
-  '(eclim-executable "/home/xb/bin/eclipse.d/eclipse/plugins/org.eclim_2.7.1/bin/eclim"))
+;; (custom-set-variables
+;;   '(eclim-eclipse-dirs '("/home/xb/bin/eclipse.d/eclipse"))
+;;   '(eclim-executable "/home/xb/bin/eclipse.d/eclipse/plugins/org.eclim_2.7.1/bin/eclim"))
 
-(win-fullscreen)
+;;(win-fullscreen)
 
