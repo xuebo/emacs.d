@@ -6,6 +6,8 @@
 (when (eq system-type 'darwin)
   (setq *is-a-mac* t))
 
+
+
 (when *is-a-mac* 
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier nil))
@@ -30,6 +32,8 @@
 (require 'dp-elpa)
 ;; Set up $PATH 
 (require 'dp-exec-path)
+
+(require-package 'use-package)
 
 ;; helm package
 (require 'dp-helm)
