@@ -43,15 +43,26 @@
 ;; ;; emacs use web-mode for vue & js code
 ;; ((nil . ((eval . (progn
 ;; 		   ;;(message " >>>> dir-locals.el")
-;; 		   (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
-;; 		   (add-to-list 'auto-mode-alist '("\\.jsx.js\\'" . web-mode))))))
+;; 		   (add-hook 'rjsx-mode-hook 'prettier-js-mode)
+;; 		   (add-hook 'web-mode-hook 'prettier-js-mode)
+;; 		   ;; (add-hook 'web-mode-hook 'company-mode)
+;; 		   ;; (add-hook 'web-mode-hook
+;; 		   ;; 	     (lambda ()
+;; 		   ;; 		 (setq company-backends '((company-css) (company-dabbrev) (company-files) (company-lsp)))))
+;; 		   ;; (add-hook 'rjsx-mode-hook
+;; 		   ;; 	     (lambda ()
+;; 		   ;; 	       (progn
+;; 		   ;; 		 (setq company-backends '((company-lsp) (company-dabbrev) (company-files) )))))
+;; 		   (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
+;; 		   (add-to-list 'auto-mode-alist '("\\.jsx.js\\'" . rjsx-mode))))))
+
 ;;  ;; set web mode variables
 ;;  (web-mode
 ;;   (indent-tabs-mode . nil)
-;;   (tab-width . 4)
+;;   (tab-width . 2)
 ;;   (eval . (progn
-;; 	    (setq web-mode-markup-indent-offset 4)
+;; 	    (setq web-mode-markup-indent-offset 2)
 ;; 	    (setq web-mode-css-indent-offset 2)
 ;; 	    (setq web-mode-code-indent-offset 2)
-;; 	    (setq web-mode-style-padding 4)
-;; 	    (setq web-mode-script-padding 4)))))
+;; 	    (setq web-mode-style-padding 0)
+;; 	    (setq web-mode-script-padding 0)))))

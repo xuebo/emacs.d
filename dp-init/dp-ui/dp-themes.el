@@ -43,4 +43,5 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
   (interactive)
   (color-theme-high-contrast))
 ;; default theme
-(cool)
+;;(cool)
+

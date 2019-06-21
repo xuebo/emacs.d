@@ -110,23 +110,3 @@
 	      (lambda () (inferior-js-keys-mode -1)))))
 
 
-
-
-;;; .dir-locals.el for any project
-;; ;; emacs use web-mode for vue & js code
-;; ((nil . ((eval . (progn
-;; 		   ;;(message " >>>> dir-locals.el")
-;; 		   (add-hook 'js2-mode-hook 'prettier-js-mode)
-;; 		   (add-hook 'web-mode-hook 'prettier-js-mode)
-;; 		   (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
-;; 		   (add-to-list 'auto-mode-alist '("\\.jsx.js\\'" . web-mode))))))
-;;  ;; set web mode variables
-;;  (web-mode
-;;   (indent-tabs-mode . nil)
-;;   (tab-width . 2)
-;;   (eval . (progn
-;; 	    (setq web-mode-markup-indent-offset 2)
-;; 	    (setq web-mode-css-indent-offset 2)
-;; 	    (setq web-mode-code-indent-offset 2)
-;; 	    (setq web-mode-style-padding 0)
-;; 	    (setq web-mode-script-padding 0)))))
