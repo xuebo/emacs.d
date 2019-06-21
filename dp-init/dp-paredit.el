@@ -1,6 +1,9 @@
 (provide 'dp-paredit)
 
 (require-package 'paredit)
+(require-package 'highlight-sexp)
+(require-package 'highlight-parentheses)
+(global-highlight-parentheses-mode t)
 ;;(autoload 'enable-paredit-mode "paredit")
 
 (defun maybe-map-paredit-newline ()
@@ -45,3 +48,7 @@
 
 (require-package 'paredit-everywhere)
 (add-hook 'prog-mode-hook 'paredit-everywhere-mode)
+
+
+(add-hook 'rjsx-mode-hook 'highlight-sexp-mode)
+(add-hook 'web-mode-hook 'highlight-sexp-mode)

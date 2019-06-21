@@ -29,40 +29,21 @@
 	company-show-numbers            t
 	company-tooltip-limit           20
 	company-dabbrev-downcase        nil
-	company-backends                '((company-gtags) (company-files) (company-dabbrev) (company-dabbrev-code)))
+	company-backends                '((company-gtags)
+					  (company-files)
+					  (company-dabbrev)
+					  (company-dabbrev-code)
+					  ;; (company-tern)
+					  (company-yasnippet)))
 
   :init (progn
 	  (add-hook 'after-init-hook 'global-company-mode)
 	  ;; (add-hook 'company-mode-hook 'company-box-mode)
 	  (add-hook 'company-mode-hook 'company-quickhelp-mode))
 
-  :bind (("s-;" . company-complete-common)
+  :bind (([tab] . company-complete-common)
 	 ("M-/" . company-complete)))
 
-;; (add-hook 'after-init-hook 'global-company-mode)
-;; (add-hook 'company-mode-hook 'company-quickhelp-mode)
-
-;; (add-to-list 'company-backends 'company-dabbrev-code)
-;; (add-to-list 'company-backends 'company-yasnippet)
-;; (add-to-list 'company-backends 'company-files)
-;; (add-to-list 'company-backends 'company-tern)
-
-;; (defun do-yas-expand ()
-;;     (let ((yas/fallback-behavior 'return-nil))
-;;       (yas/expand)))
-
-;; (defun tab-indent-or-complete ()
-;;     (interactive)
-;;     (if (minibufferp)
-;;         (minibuffer-complete)
-;;       (if (or (not yas/minor-mode)
-;;               (null (do-yas-expand)))
-;;           (if (check-expansion)
-;;               (company-complete-common)
-;;             (indent-for-tab-command)))))
-
-;;(global-set-key (kbd "M-/") 'company-complete)
-;;(global-set-key [kbd "\t"] 'tab-indent-or-complete)
 
 
 
