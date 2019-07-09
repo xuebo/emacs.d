@@ -2,10 +2,19 @@
 (require-package 'electric-spacing)
 (require-package 'lsp-mode)
 
-(require 'lsp-mode)
+(require-package 'lsp-vue)
+(require-package 'lsp-javascript-typescript)
+
+(use-package lsp-mode
+  :defer t
+  :commands (lsp lsp-deferred)
+  :init 
+  (add-hook 'web-mode-hook #'lsp)
+  (add-hook 'typescript-mode-hook #'lsp)
+  (add-hook 'rjsx-mode-hook #'lsp))
+
 ;(add-hook 'java-mode-hook #'lsp)
-(add-hook 'js-mode-hook #'lsp)
-(add-hook 'web-mode-hook #'lsp)
+;(add-hook 'web-mode-hook #'lsp-deferred)
 
 (which-function-mode 1)
 (require 'dp-csharp)
