@@ -9,6 +9,9 @@
 
 (require-package 'company-quickhelp)
 
+(require-package 'company-tabnine)
+
+(use-package company-tabnine :ensure t)
 
 (use-package company
   :diminish company-mode
@@ -30,11 +33,16 @@
 	company-tooltip-limit           20
 	company-dabbrev-downcase        nil
 	company-backends                '((company-gtags)
+					  ;; (company-tabnine)
 					  (company-files)
 					  (company-dabbrev)
 					  (company-dabbrev-code)
 					  ;; (company-tern)
-					  (company-yasnippet)))
+					  (company-yasnippet))
+	company-frontends
+	'(company-tng-frontend
+	  company-pseudo-tooltip-frontend
+	  company-echo-metadata-frontend))
 
   :init (progn
 	  (add-hook 'after-init-hook 'global-company-mode)
@@ -43,7 +51,6 @@
 
   :bind (([tab] . company-complete-common)
 	 ("M-/" . company-complete)))
-
 
 
 
