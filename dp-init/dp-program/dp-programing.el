@@ -19,6 +19,8 @@
 	 ("C-c f" . lsp-ui-peek-find-references))
   :init 
   (add-hook 'web-mode-hook #'lsp)
+  (add-hook 'python-mode-hook #'lsp)
+  (add-hook 'c++-mode-hook #'lsp)
   (add-hook 'lsp-after-open-hook 'lsp-enable-imenu)
   (add-hook 'typescript-mode-hook #'lsp)
   (add-hook 'rjsx-mode-hook #'lsp))
@@ -37,6 +39,7 @@
 (require 'dp-markdown)
 (require 'dp-org)
 (require 'dp-javascript)
+(require 'dp-python)
 (require 'dp-php)
 (require 'dp-nxml)
 (require 'dp-css)
