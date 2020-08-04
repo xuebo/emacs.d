@@ -29,6 +29,12 @@
 ;; do not allow auto backup
 (setq make-backup-files nil)
 
+;; do not create lockfiles
+(setq create-lockfiles nil)
+
+;; do not allow auto save
+;;(setq auto-save-default t)
+
 ;;(require 'cedet)
 ;;(semantic-load-enable-code-helpers)
 ;;(global-set-key [(control tab)] 'semantic-ia-complete-symbol-menu)
