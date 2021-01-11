@@ -5,7 +5,7 @@
 
 ;; (require-package 'company-box)
 
-(require-package 'company-tern)
+;; (require-package 'company-tern)
 
 (require-package 'company-quickhelp)
 

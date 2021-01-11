@@ -1,9 +1,10 @@
 (provide 'dp-programing)
 (require-package 'electric-spacing)
 (require-package 'lsp-mode)
+(require-package 'lsp-ui)
 
-(require-package 'lsp-vue)
-(require-package 'lsp-javascript-typescript)
+;; (require-package 'lsp-vue)
+;; (require-package 'lsp-javascript-typescript)
 
 (use-package lsp-mode
   :defer t
@@ -39,7 +40,7 @@
 (require 'dp-markdown)
 (require 'dp-org)
 (require 'dp-javascript)
-(require 'dp-python)
+;; (require 'dp-python)
 (require 'dp-php)
 (require 'dp-nxml)
 (require 'dp-css)
