@@ -2,10 +2,11 @@
 ;;use company mode instead auto-complete
 
 (require-package 'company)
+(require-package 'company-lsp)
 
 ;; (require-package 'company-box)
 
-;; (require-package 'company-tern)
+ ;; (require-package 'company-tern)
 
 (require-package 'company-quickhelp)
 
@@ -17,40 +18,71 @@
   :diminish company-mode
   :ensure t
   :defer 2
-
   :custom
   (company-begin-commands '(self-insert-command))
-  (company-idle-delay .1)
-  (company-minimum-prefix-length 2)
-  (company-show-numbers t)
   (company-tooltip-align-annotations 't)
   (global-company-mode t)
-
   :config
-  (setq company-idle-delay              0.1
-	company-minimum-prefix-length   2
-	company-show-numbers            t
-	company-tooltip-limit           20
-	company-dabbrev-downcase        nil
-	company-backends                '((company-gtags)
-					  ;; (company-tabnine)
-					  (company-files)
-					  (company-dabbrev)
-					  (company-dabbrev-code)
-					  ;; (company-tern)
-					  (company-yasnippet))
-	company-frontends
-	'(company-tng-frontend
-	  company-pseudo-tooltip-frontend
-	  company-echo-metadata-frontend))
+  (setq company-idle-delay 0.1
+	company-minimum-prefix-length 1
+ 	company-dabbrev-downcase nil
+	company-tooltip0limit 20)
+  :config
+  (setq company-frontends
+	'(company-pseudo-tooltip-frontend
+	  company-preview-if-just-one-frontend )
+	company-backends
+	'((company-gtags)
+	  ;; (company-lsp)
+	  ;; (company-tabnine)
+	  (company-files)
+	  (company-dabbrev)
+	  (company-dabbrev-code)
+	  ;; (company-tern)
+	  (company-yasnippet))
+	))
 
-  :init (progn
-	  (add-hook 'after-init-hook 'global-company-mode)
-	  ;; (add-hook 'company-mode-hook 'company-box-mode)
-	  (add-hook 'company-mode-hook 'company-quickhelp-mode))
 
-  :bind (([tab] . company-complete-common)
-	 ("M-/" . company-complete)))
+;; (use-package company
+;;   :diminish company-mode
+;;   :ensure t
+;;   :defer 2
+
+;;   :custom
+;;   (company-begin-commands '(self-insert-command))
+;;   ;;(company-idle-delay 0.5)
+;;   ;; (company-minimum-prefix-length 0)
+;;   ;; (company-show-numbers t)
+;;   (company-tooltip-align-annotations 't)
+;;   (global-company-mode t)
+
+;;   :config
+;;   (setq company-idle-delay              0.5
+;; 	company-minimum-prefix-length   1
+;; 	company-show-numbers            t
+;; 	company-tooltip-offset          -1
+;; 	company-tooltip-limit           20
+;; 	company-dabbrev-downcase        t
+;; 	company-backends                '((company-gtags)
+;; 					  ;; (company-tabnine)
+;; 					  (company-files)
+;; 					  (company-dabbrev)
+;; 					  (company-dabbrev-code)
+;; 					  ;; (company-tern)
+;; 					  (company-yasnippet))
+;; 	company-frontends
+;; 	'(company-tng-frontend
+;; 	  company-pseudo-tooltip-frontend
+;; 	  ;;company-echo-metadata-frontend
+;; 	  ))
+
+;;   :init (progn
+;; 	  (add-hook 'after-init-hook 'global-company-mode)
+;; 	  ;; (add-hook 'company-mode-hook 'company-box-mode)
+;; 	  (add-hook 'company-mode-hook 'company-quickhelp-mode))
+
+;;   :bind (([tab] . company-complete-common)
+;; 	 ("M-/" . company-complete)))
 
 
 

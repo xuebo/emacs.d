@@ -102,6 +102,8 @@
 
 (require 'dp-gui-frames)
 
+(require 'dp-undotree)
+
 ;; Allow users to provide an optional "dp-local" containing personal settings
 (require 'dp-local nil t)
 

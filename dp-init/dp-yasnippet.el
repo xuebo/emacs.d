@@ -4,7 +4,7 @@
 ;;(yas-global-mode t)
 
 ;; Develop and keep my snippets under these
-(setq yas/root-directory 
+(setq yas-snippet-dirs 
       (expand-file-name "/mysnippets" user-emacs-directory))
 
 ;; Map `yas/load-directory' to every element

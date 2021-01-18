@@ -19,16 +19,20 @@
 	 ("C->" . lsp-ui-peek-jump-forward)
 	 ("C-c f" . lsp-ui-peek-find-references))
   :init 
-  (add-hook 'web-mode-hook #'lsp)
+  ;; (add-hook 'web-mode-hook #'lsp)
   (add-hook 'python-mode-hook #'lsp)
   (add-hook 'c++-mode-hook #'lsp)
   (add-hook 'lsp-after-open-hook 'lsp-enable-imenu)
   (add-hook 'typescript-mode-hook #'lsp)
-  (add-hook 'rjsx-mode-hook #'lsp))
+  (add-hook 'rjsx-mode-hook #'lsp)
+  :config
+  (setq gc-cons-threshold 100000000
+	read-process-output-max (* 20 1024 1024)
+	lsp-completion-provider :capf))
 
 ;; optionally
-(use-package lsp-ui :commands lsp-ui-mode)
-(use-package company-lsp :commands company-lsp)
+;; (use-package lsp-ui :commands lsp-ui-mode)
+;; (use-package company-lsp :commands company-lsp)
 (use-package helm-lsp :commands helm-lsp-workspace-symbol)
 (use-package lsp-treemacs :commands lsp-treemacs-errors-list)
 

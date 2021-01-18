@@ -26,62 +26,62 @@ This one changes the cursor color on each blink. Define colors in `blink-cursor-
     )
   (internal-show-cursor nil (not (internal-show-cursor-p))))
 
-(require-package 'color-theme)
-(color-theme-initialize)
-(require 'dp-color-themes)
+;; (require-package 'color-theme)
+;; (color-theme-initialize)
+;; (require 'dp-color-themes)
 
-;; Toggle cool, sweet and crazy. 
-(defun cool ()
-  "Activate a cool color theme."
-  (interactive)
-  (color-theme-xuebo-black-white))
+;; ;; Toggle cool, sweet and crazy. 
+;; (defun cool ()
+;;   "Activate a cool color theme."
+;;   (interactive)
+;;   (color-theme-xuebo-black-white))
 
-(defun sweet ()
-  "Activate a sweet color theme."
-  (interactive)
-  (color-theme-hello-kitty))
+;; (defun sweet ()
+;;   "Activate a sweet color theme."
+;;   (interactive)
+;;   (color-theme-hello-kitty))
 
-(defun crazy ()
-  "Activate a crazy color theme."
-  (interactive)
-  (color-theme-high-contrast))
-
-
-(require-package 'doom-themes)
-(require 'doom-themes)
+;; (defun crazy ()
+;;   "Activate a crazy color theme."
+;;   (interactive)
+;;   (color-theme-high-contrast))
 
 
-;; use doom themes
-;; Global settings (defaults)
-(setq doom-themes-enable-bold t	; if nil, bold is universally disabled
-      doom-themes-enable-italic t) ; if nil, italics is universally disabled
-
-;; Load the theme (doom-one, doom-molokai, etc); keep in mind that each theme
-;; may have their own settings.
+;; (require-package 'doom-themes)
+;; (require 'doom-themes)
 
 
-;;(load-theme 'doom-one t)
-;; (load-theme 'doom-vibrant t)
-;; (load-theme 'doom-city-lights t)
-;; (load-theme 'doom-dracula t)
-;; (load-theme 'doom-Iosvkem t)
-;; (load-theme 'doom-solarized-light t)
-;; (load-theme 'doom-spacegrey t)
-;; (load-theme 'doom-peacock t)
-;; (load-theme 'doom-molokai t)
+;; ;; use doom themes
+;; ;; Global settings (defaults)
+;; (setq doom-themes-enable-bold t	; if nil, bold is universally disabled
+;;       doom-themes-enable-italic t) ; if nil, italics is universally disabled
 
-;; Enable flashing mode-line on errors
-(doom-themes-visual-bell-config)
+;; ;; Load the theme (doom-one, doom-molokai, etc); keep in mind that each theme
+;; ;; may have their own settings.
 
-;; Enable custom neotree theme (all-the-icons must be installed!)
-(doom-themes-neotree-config)
-;; or for treemacs users
-(doom-themes-treemacs-config)
 
-;; Corrects (and improves) org-mode's native fontification.
-(doom-themes-org-config)
-;; default theme
-;;(cool)
+;; ;;(load-theme 'doom-one t)
+;; ;; (load-theme 'doom-vibrant t)
+;; ;; (load-theme 'doom-city-lights t)
+;; ;; (load-theme 'doom-dracula t)
+;; ;; (load-theme 'doom-Iosvkem t)
+;; ;; (load-theme 'doom-solarized-light t)
+;; ;; (load-theme 'doom-spacegrey t)
+;; ;; (load-theme 'doom-peacock t)
+;; ;; (load-theme 'doom-molokai t)
+
+;; ;; Enable flashing mode-line on errors
+;; (doom-themes-visual-bell-config)
+
+;; ;; Enable custom neotree theme (all-the-icons must be installed!)
+;; (doom-themes-neotree-config)
+;; ;; or for treemacs users
+;; (doom-themes-treemacs-config)
+
+;; ;; Corrects (and improves) org-mode's native fontification.
+;; (doom-themes-org-config)
+;; ;; default theme
+;; ;;(cool)
 
 ;; idea darkula theme
 (require-package 'idea-darkula-theme)
