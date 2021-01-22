@@ -6,6 +6,11 @@
 ;; (require-package 'lsp-vue)
 ;; (require-package 'lsp-javascript-typescript)
 
+(require-package 'auto-rename-tag)
+
+(require 'auto-rename-tag)
+
+
 (use-package lsp-mode
   :defer t
   :commands (lsp lsp-deferred)
@@ -19,16 +24,21 @@
 	 ("C->" . lsp-ui-peek-jump-forward)
 	 ("C-c f" . lsp-ui-peek-find-references))
   :init 
-  ;; (add-hook 'web-mode-hook #'lsp)
+  (add-hook 'web-mode-hook #'lsp)
+  (add-hook 'web-mode-hook 'auto-rename-tag-mode)
   (add-hook 'python-mode-hook #'lsp)
   (add-hook 'c++-mode-hook #'lsp)
   (add-hook 'lsp-after-open-hook 'lsp-enable-imenu)
   (add-hook 'typescript-mode-hook #'lsp)
+  (add-hook 'typescript-mode-hook 'auto-rename-tag-mode)
   (add-hook 'rjsx-mode-hook #'lsp)
+  (add-hook 'rjsx-mode-hook 'auto-rename-tag-mode)
   :config
   (setq gc-cons-threshold 100000000
 	read-process-output-max (* 20 1024 1024)
 	lsp-completion-provider :capf))
+
+
 
 ;; optionally
 ;; (use-package lsp-ui :commands lsp-ui-mode)

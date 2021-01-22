@@ -42,7 +42,6 @@
 	  (company-yasnippet))
 	))
 
-
 ;; (use-package company
 ;;   :diminish company-mode
 ;;   :ensure t
